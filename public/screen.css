@@ -71,3 +71,7 @@ fieldset i.paper {
 fieldset i.scissors {
   color: blue;
 }
+footer {
+  display: flex;
+  justify-content: center;
+}
