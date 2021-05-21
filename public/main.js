@@ -1,6 +1,6 @@
 function main() {
-  let p1 = ''
-  let p2 = ''
+  let p1 = 'p1'
+  let p2 = 'p2'
 
   // handles if player1 selects rock
   const selectRockP1 = document.querySelector('.player1 .rock')
@@ -56,7 +56,22 @@ function main() {
   selectScissorsP2.addEventListener('click', clickScissorsP2)
 
   // set up logic to determine which player has the better hand
-  console.log(p1, p2)
+  if (p1 === p2) {
+    window.alert('Draw!')
+  } else if (
+    (p1 === 'ROCK' && p2 === 'SCISSORS') ||
+    (p1 === 'SCISSORS' && p2 === 'PAPER') ||
+    (p1 === 'PAPER' && p2 === 'ROCK')
+  ) {
+    window.alert('Player 1 won!')
+  } else if (
+    (p1 === 'SCISSORS' && p2 === 'ROCK') ||
+    (p1 === 'PAPER' && p2 === 'SCISSORS') ||
+    (p1 === 'ROCK' && p2 === 'PAPER')
+  ) {
+    window.alert('Player 2 won!')
+  }
+
   // setup reset button
   function resetHands() {
     player1Choice = document.querySelector('.player1 h3')
