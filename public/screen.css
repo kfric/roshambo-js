@@ -62,13 +62,19 @@ fieldset i {
 }
 
 fieldset i.rock {
-  color: green;
+  color: grey;
 }
 
 fieldset i.paper {
-  color: #f64545;
+  color: white;
 }
 fieldset i.scissors {
+  color: red;
+}
+fieldset i.lizard {
+  color: green;
+}
+fieldset i.spock {
   color: blue;
 }
 footer {
