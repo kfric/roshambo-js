@@ -107,9 +107,9 @@ function main() {
       (p1 === 'PAPER' && p2 === 'SPOCK') ||
       (p1 === 'SPOCK' && p2 === 'ROCK')
     ) {
-      window.alert('Player 1 won!')
+      window.alert(`Player 1 won!\n${p1} beats ${p2}`)
     } else {
-      window.alert('Player 2 won!')
+      window.alert(`Player 2 won!\n${p2} beats ${p1}`)
     }
   }
   // setup reset button
@@ -120,6 +120,13 @@ function main() {
     player2Choice.textContent = 'Your move'
   }
   document.querySelector('button').addEventListener('click', resetHands)
+
+  function rules() {
+    window.alert(
+      ' Scissors cuts Paper \n Paper covers Rock \n Rock crushes Lizard \n Lizard poisons Spock \n Spock smashes Scissors \n Scissors decapitates Lizard \n Lizard eats Paper \n Paper disproves Spock \n Spock vaporizes Rock \n Rock crushes Scissors'
+    )
+  }
+  document.querySelector('.rules').addEventListener('click', rules)
 }
 
 document.addEventListener('DOMContentLoaded', main)
